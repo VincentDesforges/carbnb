@@ -7,6 +7,8 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
@@ -14,10 +16,7 @@
 
     <%= render 'shared/flashes' %>
 
-    <div class="min-height">
-
       <%= yield %>
-    </div>
 
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
