@@ -50,6 +50,8 @@ Car.create!({
   user_id: 10
   })
 
+
+
 puts "Seed finished..."
 
 
