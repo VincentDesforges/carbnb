@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# User.destroy_all
-# Car.destroy_all
+User.destroy_all
+Car.destroy_all
 
-puts "Starts seed..."
+puts "Starts seed users..."
 
-User.create!({
+john = User.new({
   first_name: "John",
   last_name: "Johnson",
   username: "johnjohn123",
@@ -19,7 +19,7 @@ User.create!({
   password: "123456"
 })
 
-User.create!({
+seb = User.new({
   first_name: "Seb",
   last_name: "Saunier",
   username: "sebby3000",
@@ -28,7 +28,13 @@ User.create!({
   password: "1234567"
 })
 
-Car.create!({
+john.save!
+seb.save!
+
+puts "User seed done..."
+puts "Starts seed cars..."
+
+bugatti = Car.new({
   make: "Bugatti",
   model: "Chiron",
   year: 2017,
@@ -36,10 +42,10 @@ Car.create!({
   mileage: 10000,
   price_per_day: 35.5,
   location: "Hoxton, London",
-  user_id: 9
-  })
+})
+bugatti.user = john
 
-Car.create!({
+mini = Car.new({
   make: "Mini",
   model: "Cooper OG",
   year: 1990,
@@ -47,11 +53,14 @@ Car.create!({
   mileage: 100000,
   price_per_day: 99.9,
   location: "Soho, London",
-  user_id: 10
-  })
+})
 
+mini.user = seb
 
+bugatti.save!
+mini.save!
 
+puts "Car seed done..."
 puts "Seed finished..."
 
 
