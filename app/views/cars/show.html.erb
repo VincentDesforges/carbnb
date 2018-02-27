@@ -1,18 +1,46 @@
 <div class="container">
-  <h1>Show car</h1>
-  <%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
-  <ul>
-    <li><%= @car.make %></li>
-    <li><%= @car.model %></li>
-    <li><%= @car.user.username %></li>
-    <li><%= @car.year %></li>
-    <li><%= @car.mileage %></li>
-    <li><%= @car.color %></li>
-    <li><%= @car.price_per_day %></li>
-    <li><%= @car.location %></li>
-  </ul>
 
-  <%= link_to "Book this car", '#', class: "btn btn-danger" %>
+<%#= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="car-title">
+        <h1><%= @car.make %></h1>
+      </div>
+      <div class="car-infocard">
+        <p class="price-style">
+          £<%= @car.price_per_day %> per day
+        </p>
+        <ul class="car-card-list">
+          <li>Make: <%= @car.make %></li>
+          <li>Model: <%= @car.model %></li>
+          <li>Year: <%= @car.year %></li>
+          <li>Mileage: <%= @car.mileage %></li>
+          <li>Color: <%= @car.color %></li>
+        </ul>
+
+        <div class="contact-and-reviews">
+          <p>[no user photo yet]</p>
+          <p><%= @car.user.first_name %></p>
+          <p><%= @car.user.address %></p>
+          <%= link_to "Contact #{@car.user.first_name}", '#', class: "btn btn-danger" %>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6">
+      <div class="address-info-data">
+        <h3><%= @car.location %></h3>
+      </div>
+      <div class="map-card">
+        <p>Map Placeholder</p>
+      </div>
+    </div>
+  </div>
+
+  <p>[Photo placeholder]</p>
+
   <%= link_to "Edit car", edit_car_path(@car), class: "btn btn-danger" %>
   <%= link_to "Delete car", car_path(@car), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
 
