@@ -1,7 +1,7 @@
 class CarPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all # if we want users to log in before looking at the index
+      scope.all
     end
   end
 
@@ -10,16 +10,16 @@ class CarPolicy < ApplicationPolicy
   end
 
   def update?
-    is_user
+    is_user_or_admin
   end
 
   def destroy?
-    is_user
+    is_user_or_admin
   end
 
   private
 
-  def is_user
-    record.user == user
+  def is_user_or_admin
+    record.user == user || user.admin
   end
 end
