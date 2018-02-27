@@ -10,4 +10,5 @@ class Car < ApplicationRecord
   validates :price_per_day, presence: true
   validates :location, presence: true
 
+  mount_uploader :photo, PhotoUploader
 end

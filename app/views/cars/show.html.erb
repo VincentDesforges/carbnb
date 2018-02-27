@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Show car</h1>
-  <p>[Photo placeholder]</p>
+  <%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
   <ul>
     <li><%= @car.make %></li>
     <li><%= @car.model %></li>
@@ -17,4 +17,3 @@
   <%= link_to "Delete car", car_path(@car), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
 
 </div>
-
