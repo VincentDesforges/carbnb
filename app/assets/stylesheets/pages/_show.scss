@@ -79,6 +79,11 @@
   }
 }
 
+.asign-btn-width{
+  // this is here to make the text in the buttons wrap if it reaches the end of the line
+  white-space: normal;
+  width: 150px;
+}
 
 
 

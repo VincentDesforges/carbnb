@@ -1,53 +1,56 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-6 col-md-offset-3">
-
-
+<div class="row">
+  <div class="col-sm-12 col-md-6 col-md-offset-3">
 
     <%= simple_form_for @car do |f| %>
-      <%= f.input :make, placeholder: "Make", label: false, input_html: { class: 'rounded' } %>
+      <%= f.input :make, placeholder: "Make", label: false %>
 
-      <%= f.input :model, placeholder: "Model", label: false, input_html: { class: 'rounded' } %>
+      <%= f.input :model, placeholder: "Model", label: false %>
 
-    <div class="dropdowns">
+      <div class="dropdowns">
 
-      <div class="selectWrapper">
-        <div class="dropdown-year">
-          <%= f.input :year, collection: 1920..2018, prompt: "Select year of manufacture", label: false %>
+        <div class="selectWrapper">
+          <div class="dropdown-year">
+            <%= f.input :year, collection: 1920..2018, prompt: "Select year of manufacture", label: false %>
+          </div>
+        </div>
+
+        <div class="selectWrapper">
+          <div class="dropdown-color">
+            <%= f.input :color, collection: ["black", "silver", "grey", "red", "yellow", "dark blue", "light blue", "orange", "white", "pink", "brown", "dark green", "light green", "purple"], prompt: "Color", label: false %>
+          </div>
         </div>
       </div>
-
-      <div class="selectWrapper">
-        <div class="dropdown-color">
-          <%= f.input :color, collection: ["black", "silver", "grey", "red", "yellow", "dark blue", "light blue", "orange", "white", "pink", "brown", "dark green", "light green", "purple"], prompt: "Color", label: false %>
-        </div>
-      </div>
-    </div>
 
 
       <div class="input-group">
         <div class="input-group-addon">£</div>
-        <%= f.input :price_per_day, placeholder: "Price/day", label: false, input_html: { class: 'rounded' } %>
+        <%= f.input :price_per_day, placeholder: "Price/day", label: false, input_html: { class: 'input-group-fix-right' } %>
       </div>
 
 
       <div class="input-group">
-        <%= f.input :mileage, placeholder: "Mileage", label: false, input_html: { class: 'rounded' } %>
+        <%= f.input :mileage, placeholder: "Mileage", label: false, input_html: { class: 'input-group-fix-left' } %>
         <div class="input-group-addon">miles</div>
       </div>
 
-      <%= f.input :location, placeholder: "Location: e.g. 138 Kingsland Road, London E2 8DY", label: false, input_html: { class: 'rounded' } %>
+      <%= f.input :location, placeholder: "Location: e.g. 138 Kingsland Road, London E2 8DY", label: false %>
 
       <%= f.input :photo %>
+
+      <!-- <div class="form-group file optional car_photo btn btn-danger btn-file">
+        <label class="control-label file optional" for="car_photo">Photo</label>
+        <input class="file optional" type="file" name="car[photo]" id="car_photo">
+      </div>
+
+      <span class="btn btn-danger btn-file">
+          Browse <input type="file">
+      </span> -->
 
 
 
       <div class="add-car-submit-button">
         <%= f.submit class: "btn btn-danger"%>
       </div>
-
-
     <% end %>
-    </div>
   </div>
 </div>
