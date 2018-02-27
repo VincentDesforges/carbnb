@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users, only: :show
+
   resources :cars
   # resources :bookings, only: [:index, :show]
   root to: 'pages#home'
