@@ -1,14 +1,24 @@
 <div class="container">
-
-<%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="car-title">
         <h1><%= @car.make %></h1>
+        <%= link_to "Edit car", edit_car_path(@car), class: "btn btn-danger" %>
+        <%= link_to "Delete car", car_path(@car), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
       </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="address-info-data">
+        <h3><%= @car.location %></h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
       <div class="car-infocard">
         <p class="price-style">
-          £<%= @car.price_per_day %> per day
+          <strong>£<%= @car.price_per_day %></strong> per day
         </p>
         <ul class="car-card-list">
           <li>Make: <%= @car.make %></li>
@@ -18,30 +28,53 @@
           <li>Color: <%= @car.color %></li>
         </ul>
 
-        <div class="contact-and-reviews">
-          <p>[no user photo yet]</p>
-          <p><%= @car.user.first_name %></p>
-          <p><%= @car.user.address %></p>
-          <%= link_to "Contact #{@car.user.first_name}", '#', class: "btn btn-danger" %>
+        <div class="contact-row">
+          <div>
+            <%= link_to '#', class: :avatarNtext do %>
+              <%= image_tag('logo.png', {class: :avatar}) %>
+              <div class="contact-text">
+                <p><strong><%= @car.user.first_name %></strong></p>
+                <p><%= @car.user.address %></p>
+              </div>
+            <% end %>
+          </div>
 
+          <div>
+            <%= link_to "Contact #{@car.user.first_name}", '#', class: "btn btn-danger" %>
+          </div>
+        </div>
+
+        <div class="review-row">
+          <p>[No reviews yet]</p>
+          <p>****.</p>
+          <%= link_to "View Reviews", '#', class: "btn btn-danger" %>
         </div>
       </div>
     </div>
 
 
     <div class="col-xs-12 col-md-6">
-      <div class="address-info-data">
-        <h3><%= @car.location %></h3>
-      </div>
       <div class="map-card">
-        <p>Map Placeholder</p>
+        <p>[Map Placeholder]</p>
       </div>
     </div>
   </div>
 
-  <p>[Photo placeholder]</p>
+  <div class="photos-container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
+      </div>
 
-  <%= link_to "Edit car", edit_car_path(@car), class: "btn btn-danger" %>
-  <%= link_to "Delete car", car_path(@car), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+      <% 5.times do %>
+        <div class="col-xs-12 col-md-6">
+          <div class="photo-placeholder">
+            <p>[Photo placeholder]</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 
 </div>
