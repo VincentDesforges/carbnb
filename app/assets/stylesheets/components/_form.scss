@@ -1,11 +1,12 @@
 .signup-form-title {
   text-align: center;
+  margin-bottom: 20px;
+  color: #4F4F4F;
 }
 
 .form-names {
   display: flex;
   justify-content: flex-start;
-
 }
 
 .form-actions {
@@ -16,3 +17,118 @@
    margin: 0px 10px;
   }
 }
+
+.first-name {
+  width: 45%;
+  margin-right: 10%;
+}
+
+.last-name {
+  width: 45%;
+}
+
+
+.rounded {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.login-form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4F4F4F;
+}
+
+.links {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+  & > * {
+   margin: 20px 10px;
+  }
+}
+
+.remember-box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.add-car-form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4F4F4F;
+}
+
+.add-car-submit-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  & > * {
+   margin: 20px 10px;
+  }
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.dropdown-year {
+   // width: 100%;
+  height: 100%;
+  // border: none;
+  outline: none !important;
+  border: 0px solid #FFF;
+
+
+}
+
+.dropdown-color {
+  height: 100%;
+  outline: none !important;
+  border: 0px solid #FFF;
+
+}
+
+
+.input-group {
+  margin: 15px 0px;
+}
+
+.selectWrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 39px;
+  width: 90%;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
