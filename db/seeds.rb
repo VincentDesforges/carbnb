@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
+puts "Deleting old database..."
 Car.destroy_all
+User.destroy_all
 
 puts "Starts seed users..."
 
@@ -28,8 +29,20 @@ seb = User.new({
   password: "1234567"
 })
 
+admin = User.new({
+  first_name: "Ad",
+  last_name: "Min",
+  username: "admin01",
+  address: "administan",
+  email: "admin@example.com",
+  password: "123456",
+  admin: true
+})
+
 john.save!
 seb.save!
+admin.save!
+
 
 puts "User seed done..."
 puts "Starts seed cars..."
@@ -43,7 +56,7 @@ bugatti = Car.new({
   price_per_day: 35.5,
   location: "Hoxton, London",
 })
-bugatti.user = john
+bugatti.user = User.find_by(username: "johnjohn123")
 
 mini = Car.new({
   make: "Mini",
@@ -54,8 +67,7 @@ mini = Car.new({
   price_per_day: 99.9,
   location: "Soho, London",
 })
-
-mini.user = seb
+mini.user = User.find_by(username: "sebby3000")
 
 bugatti.save!
 mini.save!
