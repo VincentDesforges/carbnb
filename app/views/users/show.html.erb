@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="dashboard-wrapper">
+    <h1> <%= @user.username %> </h1>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="content-box">
+            <%= cl_image_tag @user.photo %>
+            <%= link_to "Upload New Picture", '#', class: "btn btn-danger" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-12">
+        <div class="content-box">
+          <h1>Personal Details</h1>
+          <div class="divider">
+          <ul>
+            <li>Username: <%= @user.username %></li>
+            <li>First Name: <%= @user.first_name %></li>
+            <li>Last Name: <%= @user.last_name %></li>
+            <li>Address: <%= @user.address %></li>
+            <li>Email: <%= @user.email %></li>
+          </ul>
+          <%= link_to "Edit Details", '#', class: "btn btn-danger" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="content-box">
+          <h1>My Bookings</h1>
+          <% booking_count = 0 %>
+          <% @user.bookings.each do |booking| %>
+          <% booking_count += 1 %>
+          <h2>Booking <%= booking_count %>.<h2>
+          <ul>
+            <li>Car: <%= booking.car.make booking.car.model %></li>
+            <li>Total Price: <%= booking.total_price %></li>
+            <li>Start date: <%= booking.start_date %></li>
+            <li>End date: <%= booking.end_date %></li>
+            <li>Counterparty: <%= booking.user_id %></li>
+          </ul>
+          <% end %>
+          <%= link_to "Edit Bookings", '#', class: "btn btn-danger" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="content-box">
+          <h1>My Cars</h1>
+          <% car_count = 0 %>
+          <% @user.cars.each do |car| %>
+          <% car_count += 1 %>
+          <h2>Car <%= car_count %>.<h2>
+          <ul>
+            <li>Make: <%= car.make %></li>
+            <li>Model: <%= car.model %></li>
+            <li>Price: <%= car.price_per_day %></li>
+            <li>Location: <%= car.location %></li>
+            <li>Bookings: <%= car.booking.count %></li>
+          </ul>
+          <% end %>
+          <%= link_to "Edit Cars", '#', class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
