@@ -1,0 +1,73 @@
+.cards {
+  display: flex;
+}
+.card {
+  flex: 1 1 auto;
+  margin: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  opacity: 0.7;
+}
+
+.card-body {
+  height: 180px;
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card-user {
+  position: absolute;
+  // left: 0px;
+  // bottom: 10px;
+}
+
+.card-footer {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 100px;
+}
+
+.car-name {
+  position: absolute;
+  color: $red;
+  right: 60px;
+  top: 210px;
+}
+
+.owner-details {
+  color: $red;
+  margin: 5px;
+  position: absolute;
+  left: 110px;
+  bottom: 30px;
+}
+
+.rating {
+  position: absolute;
+  left: 65px;
+  top: 210px;
+  color: gold;
+  font-size: 50px;
+}
+
+.price-per-day {
+  position: absolute;
+  font-size: 30px;
+  bottom: 50px;
+  right: 70px;
+  color: #295F4E;
+}
+
+.card-user {
+  border-radius: 50%;
+}
+
+

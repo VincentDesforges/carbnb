@@ -1,0 +1,24 @@
+<% @cars.each do |car| %>
+  <div class="col-xs-12 col-sm-6 col-md-4 ">
+    <div class="cards">
+      <div class="card">
+        <div class= "card-body" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= car.photo %>);">
+        </div>
+        <div class="card-footer">
+          <div class="car-details">
+            <h4 class="car-name"><%= car.make %> <%= car.model %></h4>
+            <h4 class="rating">*****</h4>
+          </div>
+          <div class="owner-details">
+            <h6><%= car.user.first_name %></h4>
+            <h6><%= car.user.address %></h4>
+          </div>
+          <!-- <img class="card-user" src="images/logo.png"> -->
+          <%#= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag car.user.photo, class: "avatar avatar-medium" %>
+          <h5 class="price-per-day">£<%= car.price_per_day %>/day</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
