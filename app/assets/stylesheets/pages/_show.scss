@@ -180,3 +180,22 @@ min-height: 230px;
   justify-content: space-around;
   margin-bottom: 10px;
 }
+
+// carousel css:
+#carousel-car{
+  margin: 20px 0;
+}
+
+.carousel-inner{
+  border-radius: $border-radius-base;
+  // overflow: none;
+}
+
+.carousel-control{
+  border-radius: $border-radius-base;
+}
+
+.fit-to-size{
+  width:100%;
+}
+// carousel css end...
