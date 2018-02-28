@@ -22,6 +22,7 @@ class CarsController < ApplicationController
     @markers = [{
         lat: @car.latitude,
         lng: @car.longitude,
+        infoWindow: { content: render_to_string(partial: "/cars/map_box", locals: { car: @car }) }
       }]
   end
 
