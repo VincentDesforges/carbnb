@@ -13,6 +13,9 @@
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false,  placeholder: "Password", label: false, input_html: { class: 'rounded' } %>
     <%= f.input :password_confirmation, required: false,  placeholder: "Password Confirmation", label: false, input_html: { class: 'rounded' } %>
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true,  placeholder: "Current Password", label: false, input_html: { class: 'rounded' } %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+
   </div>
 
   <div class="form-actions">
