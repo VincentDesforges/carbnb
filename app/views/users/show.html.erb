@@ -5,7 +5,7 @@
       <div class="col-xs-12 col-md-12">
         <div class="content-box">
             <%= cl_image_tag @user.photo %>
-            <%= link_to "Upload New Picture", '#', class: "btn btn-danger" %>
+            <%= link_to "Upload New Picture", edit_user_registration_path, class: "btn btn-danger" %>
         </div>
       </div>
       <div class="col-xs-12 col-md-12">
@@ -19,7 +19,7 @@
             <li>Address: <%= @user.address %></li>
             <li>Email: <%= @user.email %></li>
           </ul>
-          <%= link_to "Edit Details", '#', class: "btn btn-danger" %>
+          <%= link_to "Edit Details", edit_user_registration_path, class: "btn btn-danger" %>
           </div>
         </div>
       </div>
@@ -31,8 +31,8 @@
           <% booking_count = 0 %>
           <% @user.bookings.each do |booking| %>
           <% booking_count += 1 %>
-          <h2>Booking <%= booking_count %>.<h2>
           <ul>
+            <li><strong>Booking <%= booking_count %>.</strong></li>
             <li>Car: <%= booking.car.make booking.car.model %></li>
             <li>Total Price: <%= booking.total_price %></li>
             <li>Start date: <%= booking.start_date %></li>
@@ -49,15 +49,15 @@
           <% car_count = 0 %>
           <% @user.cars.each do |car| %>
           <% car_count += 1 %>
-          <h2>Car <%= car_count %>.<h2>
           <ul>
+            <li><strong>Car <%= car_count %>.</strong></li>
             <li>Make: <%= car.make %></li>
             <li>Model: <%= car.model %></li>
             <li>Price: <%= car.price_per_day %></li>
             <li>Location: <%= car.location %></li>
           </ul>
           <% end %>
-          <%= link_to "Edit Cars", '#', class: "btn btn-danger" %>
+          <%= link_to "Edit Cars", edit_car_path, class: "btn btn-danger" %>
         </div>
       </div>
     </div>
