@@ -12,21 +12,28 @@ User.destroy_all
 puts "Starts seed users..."
 
 john = User.new({
-  first_name: "John",
+  first_name: "Vincent",
   last_name: "Johnson",
   username: "johnjohn123",
   address: "London",
   email: "john1@example.com",
-  password: "123456"
+  password: "123456",
+  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519745313/nzoa0wkkahq6paue89jc.png'
 })
 
+# Galaxy.create!(
+# name: 'Andromeda',
+# remote_photo_url: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
+# address: 'next to the Milky Way')
+
 seb = User.new({
-  first_name: "Seb",
+  first_name: "Johann",
   last_name: "Saunier",
   username: "sebby3000",
   address: "Paris",
   email: "seb@example.com",
-  password: "1234567"
+  password: "1234567",
+  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834765/Screen_Shot_2018-02-28_at_4.18.51_pm.png'
 })
 
 admin = User.new({
@@ -55,8 +62,9 @@ bugatti = Car.new({
   mileage: 10000,
   price_per_day: 35.5,
   location: "Hoxton, London",
+  remote_photo_url:'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg'
 })
-bugatti.user = User.find_by(username: "johnjohn123")
+bugatti.user = User.find_by(username: "sebby3000")
 
 mini = Car.new({
   make: "Mini",
@@ -66,8 +74,10 @@ mini = Car.new({
   mileage: 100000,
   price_per_day: 99.9,
   location: "Soho, London",
+  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834660/mini-5dr-hatch-cooper-d-dct.jpg'
+
 })
-mini.user = User.find_by(username: "sebby3000")
+mini.user = User.find_by(username: "johnjohn123")
 
 bugatti.save!
 mini.save!
