@@ -90,11 +90,12 @@
 
 
 .map-card{
-  background-color: #E0E0E0;
-  padding: 30px 60px;
-  border-radius: $border-radius-base;
   height: 495px;
+  #map{
+    border-radius: $border-radius-base;
+  }
 }
+
 
 .photo-placeholder{
   background-color: $green;

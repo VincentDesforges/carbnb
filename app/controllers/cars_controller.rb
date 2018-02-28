@@ -3,10 +3,26 @@ class CarsController < ApplicationController
 
   def index
     @cars = Car.all
+
+    # def index # this will be needed if we have a map on the search page
+    #   @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+    #   @markers = @flats.map do |flat|
+    #     {
+    #       lat: flat.latitude,
+    #       lng: flat.longitude#,
+    #       # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+    #     }
+    #   end
+    # end
   end
 
   def show
     @car = Car.find(params[:id])
+    @markers = [{
+        lat: @car.latitude,
+        lng: @car.longitude,
+      }]
   end
 
   def new
