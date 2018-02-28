@@ -34,7 +34,7 @@
         <div class="contact-row">
           <div>
             <%= link_to '#', class: :avatarNtext do %>
-              <%= image_tag('logo.png', {class: :avatar}) %>
+              <%= image_tag(@car.user.photo, {class: :avatar}) %>
               <div class="contact-text">
                 <p><strong><%= @car.user.first_name %></strong></p>
                 <p><%= @car.user.address %></p>
@@ -43,7 +43,7 @@
           </div>
 
           <div>
-            <%= link_to "Contact #{@car.user.first_name}", '#', class: "btn btn-danger asign-btn-width" %>
+            <%= link_to "Contact #{@car.user.first_name}", new_booking_path, class: "btn btn-danger asign-btn-width" %>
           </div>
         </div>
 
