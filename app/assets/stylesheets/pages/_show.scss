@@ -1,23 +1,21 @@
-.container {
-  width: 800px;
+.dashboard-wrapper {
+margin-bottom: 10px;
 }
 
-.container h1 {
+.dashboard-wrapper h1 {
   text-align: center;
   font-family: montserrat;
   font-size: 34px;
-
-
 }
 
 .content-box {
 display: flex;
 flex-direction: column;
-margin: 20px;
+margin-top: 10px;
 background-color: #DCDCDC;
 border-radius: 20px;
 padding: 15px;
-min-height: 270px;
+min-height: 230px;
 }
 
 .content-box h1 {
@@ -34,10 +32,22 @@ min-height: 270px;
   font-family: montserrat;
   font-weight: lighter;
   position: absolute;
-  top: 80px;
+  top: 75px;
   left: 30px;
   font-size: 16px;
   list-style: none;
+  line-height: 28px;
+}
+
+.content-box ol {
+  font-family: montserrat;
+  font-weight: lighter;
+  position: absolute;
+  top: 75px;
+  left: 30px;
+  font-size: 16px;
+  list-style: none;
+  line-height: 28px;
 }
 
 .content-box img {
@@ -52,8 +62,8 @@ min-height: 270px;
 
 .content-box a {
   position: absolute;
-  bottom: 35px;
-  right: 50px;
+  bottom: 8px;
+  right: 23px;
   font-size: 12px;
   background-color: grey;
   border: none;
