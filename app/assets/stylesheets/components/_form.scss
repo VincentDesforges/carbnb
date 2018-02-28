@@ -27,13 +27,6 @@
   width: 45%;
 }
 
-
-.rounded {
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-}
-
 .login-form-title {
   text-align: center;
   margin-bottom: 20px;
@@ -112,23 +105,35 @@
   border-color: transparent;
 }
 
+.input-group-fix-left{
+  border-top-left-radius: $border-radius-base !important;
+  border-bottom-left-radius: $border-radius-base !important;
+}
+
+.input-group-fix-right{
+  border-top-right-radius: $border-radius-base !important;
+  border-bottom-right-radius: $border-radius-base !important;
+}
 
 
+// btn-file edit: https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// .btn-file {
+//     position: relative;
+//     overflow: hidden;
+// }
+// .btn-file input[type=file] {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     min-width: 100%;
+//     min-height: 100%;
+//     font-size: 100px;
+//     text-align: right;
+//     filter: alpha(opacity=0);
+//     opacity: 0;
+//     outline: none;
+//     background: white;
+//     cursor: inherit;
+//     display: block;
+// }

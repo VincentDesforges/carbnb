@@ -1,0 +1,104 @@
+.car-title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.address-info-data{
+  text-align: center;
+}
+
+.car-infocard{
+  background-color: #E0E0E0;
+  padding: 70px 60px;
+  border-radius: $border-radius-base;
+  height: 495px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.price-style{
+  color:#295F4E;
+  font-size: 14px;
+  strong{
+    font-size: 36px;
+  }
+}
+
+.car-card-list{
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-row{
+  align-items: center;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatarNtext{
+  display: flex;
+  align-items: center;
+
+
+  .avatar {
+    height: 70px;
+    margin-right: 15px;
+  }
+
+  .contact-text{
+    text-align: center;
+    flex: 1 1 auto;
+    color: $red;
+    font-size: 12px;
+
+    p{
+      margin: 0;
+    }
+
+    strong{
+      font-size: 18px;
+    }
+  }
+}
+
+.avatarNtext:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.review-row{
+  align-items: center;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  p{
+    margin: 0;
+  }
+}
+
+.asign-btn-width{
+  // this is here to make the text in the buttons wrap if it reaches the end of the line
+  white-space: normal;
+  width: 150px;
+}
+
+
+
+
+
+.map-card{
+  background-color: #E0E0E0;
+  padding: 30px 60px;
+  border-radius: $border-radius-base;
+  height: 495px;
+}
+
+.photo-placeholder{
+  background-color: $green;
+  border-radius: $border-radius-base;
+  height: 300px;
+  margin: 10px 20px;
+}
