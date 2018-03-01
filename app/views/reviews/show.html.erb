@@ -1,0 +1,22 @@
+<h2 class="show-bookings-header">Reviews</h2>
+
+<div class="container">
+  <div class="row">
+    <% @car.reviews.each do |review| %>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="booking-infocard">
+        <div class="first-row">
+           <div class="infocard-text">
+            <p class="car"><strong>Car:</strong> <%= @car.make %> <%= @car.model %></p>
+            <p class="car"><strong>Rating: </strong> <%= @car.review.rating %></p>
+            <p class="car">Comments: <%= @car.review.content %></p>
+          </div>
+          <%= cl_image_tag @car.user.photo, class: "owner-photo" %>
+        </div>
+        <div class="car-photo">
+          <%= cl_image_tag @car.photo, width:485, height:300, crop: :fill, class: "car-photo" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
