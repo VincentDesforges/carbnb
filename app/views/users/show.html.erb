@@ -33,31 +33,26 @@
           <% booking_count += 1 %>
           <ul>
             <li><strong>Booking <%= booking_count %>.</strong></li>
-            <li>Car: <%= booking.car.make booking.car.model %></li>
+            <li>Car: <%= booking.car.make %><%= booking.car.model %></li>
             <li>Total Price: <%= booking.total_price %></li>
             <li>Start date: <%= booking.start_date %></li>
             <li>End date: <%= booking.end_date %></li>
-            <li>Counterparty: <%= booking.user_id %></li>
+            <li>Owner: <%= booking.user.first_name %> <%= booking.user.last_name %></li>
           </ul>
           <% end %>
           <%= link_to "Edit Bookings", '#', class: "btn btn-danger" %>
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
-        <div class="content-box">
+        <div class="my-cars-content-box">
           <h1>My Cars</h1>
-          <% car_count = 0 %>
-          <% @user.cars.each do |car| %>
-          <% car_count += 1 %>
-          <ul>
-            <li><strong>Car <%= car_count %>.</strong></li>
-            <li>Make: <%= car.make %></li>
-            <li>Model: <%= car.model %></li>
-            <li>Price: <%= car.price_per_day %></li>
-            <li>Location: <%= car.location %></li>
-          </ul>
-          <% end %>
-          <%= link_to "Edit Cars", edit_car_path, class: "btn btn-danger" %>
+          <div class="cars-list">
+            <% @user.cars.each do |car| %>
+            <ul>
+              <li><%= link_to "#{car.make} #{car.model}", car_path(car) %></li>
+            </ul>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

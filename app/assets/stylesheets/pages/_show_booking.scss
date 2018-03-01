@@ -1,0 +1,36 @@
+.show-bookings-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.booking-infocard {
+  background-color: #E0E0E0;
+  padding: 40px 60px;
+  border-radius: $border-radius-base;
+  height: 495px;
+  margin-bottom: 40px;
+  border: 1px solid black;
+}
+
+.owner-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.infocard-text {
+  flex: 1 1 auto;
+}
+
+.first-row {
+  display: flex;
+}
+
+.car-photo {
+  border-radius: 20px;
+  width: 440px;
+  height: 260px;
+  text-align: center;
+}
+
+

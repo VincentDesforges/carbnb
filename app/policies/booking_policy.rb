@@ -5,6 +5,10 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
+  def show
+    is_user_or_admin_or_owner
+  end
+
   def new?
     return true
   end

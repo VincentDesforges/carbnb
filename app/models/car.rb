@@ -14,4 +14,15 @@ class Car < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+  include PgSearch
+  pg_search_scope :search_by_make_model_location,
+    against: [ :make, :model, :location ],
+    associated_against: {
+      user: [ :username ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end

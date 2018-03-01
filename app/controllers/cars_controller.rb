@@ -2,7 +2,13 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @cars = Car.all
+    if params[:search].present?
+       @cars = Car.search_by_make_model_location(params[:search])
+    else
+      @cars = Car.all
+    end
+
+
 
     # def index # this will be needed if we have a map on the search page
     #   @flats = Flat.where.not(latitude: nil, longitude: nil)
