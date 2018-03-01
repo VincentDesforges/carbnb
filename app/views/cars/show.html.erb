@@ -102,8 +102,11 @@
       </a>
     </div> <!-- Carousel -->
 
-    <div class="center-btn-gallery">
-      <%= link_to "Edit Photo Gallery", car_carphotos_path(@car), class: "btn btn-danger" %>
-    </div>
+    <% if policy(@car).update? %>
+      <div class="center-btn-gallery">
+        <%= link_to "Edit Photo Gallery", car_carphotos_path(@car), class: "btn btn-danger" %>
+      </div>
+    <% end %>
+
   </div>
 </div>
