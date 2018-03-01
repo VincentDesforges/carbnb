@@ -74,17 +74,27 @@
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-car" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-car" data-slide-to="1"></li>
+        <% (@car.carphotos.length - 1).times do |i| %>
+          <li data-target="#carousel-car" data-slide-to="<%= i - 1 %>"></li>
+        <% end %>
+        <!-- <li data-target="#carousel-car" data-slide-to="1"></li> -->
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-        <div class="item active">
-          <%= cl_image_tag @car.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+        <% @car.carphotos.each do |photo_class| %>
+          <p><%= photo_class.photo %></p>
+          <div class="item">
+            <%= cl_image_tag photo_class.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+          </div>
+
+        <% end %>
+        <!-- <div class="item active">
+          <%#= cl_image_tag @car.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
         </div>
         <div class="item">
-          <%= cl_image_tag "mini-5dr-hatch-cooper-d-dct.jpg", width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
-        </div>
+          <%#= cl_image_tag "mini-5dr-hatch-cooper-d-dct.jpg", width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+        </div> -->
       </div>
 
       <!-- Controls -->

@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Deleting old database..."
+Carphoto.destroy_all
 Car.destroy_all
 User.destroy_all
 
@@ -62,7 +63,7 @@ bugatti = Car.new({
   mileage: 10000,
   price_per_day: 35.5,
   location: "Hoxton, London",
-  remote_photo_url:'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg'
+  # remote_photo_url:'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg'
 })
 bugatti.user = User.find_by(username: "sebby3000")
 
@@ -74,7 +75,7 @@ mini = Car.new({
   mileage: 100000,
   price_per_day: 99.9,
   location: "Soho, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834660/mini-5dr-hatch-cooper-d-dct.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834660/mini-5dr-hatch-cooper-d-dct.jpg'
 
 })
 mini.user = User.find_by(username: "johnjohn123")
@@ -83,6 +84,21 @@ bugatti.save!
 mini.save!
 
 puts "Car seed done..."
+puts "Starting photos seed"
+
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg')
+photo.car = Car.find_by(make: "Bugatti", model:"Chiron")
+photo.save!
+
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg')
+photo.car = Car.find_by(make: "Bugatti", model:"Chiron")
+photo.save!
+
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834660/mini-5dr-hatch-cooper-d-dct.jpg')
+photo.car = Car.find_by(make: "Mini", model:"Cooper OG")
+photo.save!
+
+puts "Photo seed done..."
 puts "Seed finished..."
 
 
