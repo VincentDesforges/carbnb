@@ -24,6 +24,7 @@ class CarsController < ApplicationController
   end
 
   def show
+    @review = Review.new
     @car = Car.find(params[:id])
     @markers = [{
         lat: @car.latitude,

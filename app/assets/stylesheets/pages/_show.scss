@@ -179,17 +179,6 @@ min-height: 230px;
   line-height: 28px;
 }
 
-.content-box ol {
-  font-family: montserrat;
-  font-weight: lighter;
-  position: absolute;
-  top: 75px;
-  left: 30px;
-  font-size: 16px;
-  list-style: none;
-  line-height: 28px;
-}
-
 .content-box img {
   position: relative;
   top: 50%;
@@ -232,4 +221,17 @@ min-height: 230px;
 .fit-to-size{
   width:100%;
 }
+
+.review {
+  background-color: #DCDCDC;
+  border-radius: 20px;
+  padding: 15px;
+  min-height: 230px;
+}
+
+.review ul {
+  list-style: none;
+  line-height: 28px;
+}
+
 // carousel css end...
