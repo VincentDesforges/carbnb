@@ -33,9 +33,16 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+
     @car.user = current_user
     punit_car
     if @car.save
+      # raise
+      params["photos"]['photo'].each do |a|
+        c = Carphoto.new(photo: a)
+        c.car = @car
+        c.save
+      end
       redirect_to car_path(@car)
     else
       render :new
@@ -71,7 +78,7 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:make, :model, :year, :color, :mileage, :price_per_day, :location, :user_id, :photo)
+    params.require(:car).permit(:make, :model, :year, :color, :mileage, :price_per_day, :location, :user_id)
   end
 end
 

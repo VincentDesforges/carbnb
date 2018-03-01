@@ -12,6 +12,7 @@ class Car < ApplicationRecord
 
   # mount_uploader :photo, PhotoUploader
   has_many :carphotos
+  # accepts_nested_attributes_for :carphotos
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?

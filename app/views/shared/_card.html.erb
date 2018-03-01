@@ -3,7 +3,7 @@
   <div class="col-xs-12 col-sm-6 col-md-4 ">
       <div class="card">
 
-        <div class= "card-body" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= cl_image_path car.carphotos.first.photo %>);">
+        <div class= "card-body" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= cl_image_path car.carphotos.first.photo unless car.carphotos.empty? %>);">
         </div>
 
         <div class="card-footer">
