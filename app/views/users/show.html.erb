@@ -26,21 +26,15 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <div class="content-box">
+        <div class="my-cars-content-box">
           <h1>My Bookings</h1>
-          <% booking_count = 0 %>
-          <% @user.bookings.each do |booking| %>
-          <% booking_count += 1 %>
-          <ul>
-            <li><strong>Booking <%= booking_count %>.</strong></li>
-            <li>Car: <%= booking.car.make %><%= booking.car.model %></li>
-            <li>Total Price: <%= booking.total_price %></li>
-            <li>Start date: <%= booking.start_date %></li>
-            <li>End date: <%= booking.end_date %></li>
-            <li>Owner: <%= booking.user.first_name %> <%= booking.user.last_name %></li>
-          </ul>
-          <% end %>
-          <%= link_to "Edit Bookings", '#', class: "btn btn-danger" %>
+          <div class="cars-list">
+            <% @user.bookings.each do |booking| %>
+            <ul>
+              <li><%= link_to "#{booking.start_date} - #{booking.car.make} #{booking.car.model} - #{booking.car.user.username}", booking_path(booking) %></li>
+            </ul>
+            <% end %>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
