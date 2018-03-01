@@ -68,21 +68,30 @@
     </div>
   </div>
 
-  <div class="photos-container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>
+  <div id="carousel-car" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-car" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-car" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= cl_image_tag @car.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
       </div>
-
-      <% 5.times do %>
-        <div class="col-xs-12 col-md-6">
-          <div class="photo-placeholder">
-            <p>[Photo placeholder]</p>
-          </div>
-        </div>
-      <% end %>
+      <div class="item">
+        <%= cl_image_tag "mini-5dr-hatch-cooper-d-dct.jpg", width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+      </div>
     </div>
-  </div>
 
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-car" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-car" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div> <!-- Carousel -->
 
 </div>
