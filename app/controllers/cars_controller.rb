@@ -37,7 +37,6 @@ class CarsController < ApplicationController
     @car.user = current_user
     punit_car
     if @car.save
-      # raise
       params["photos"]['photo'].each do |a|
         c = Carphoto.new(photo: a)
         c.car = @car
