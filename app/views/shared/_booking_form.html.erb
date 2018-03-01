@@ -1,19 +1,17 @@
 <div class="row">
   <div class="col-sm-12 col-md-6 col-md-offset-3">
 
-    <%= simple_form_for @booking do |f| %>
+    <%= simple_form_for [@car,@booking] do |f| %>
 
       <div class="booking-form">
         <%= f.input :start_date, placeholder: "dd/mm/yyyy" %>
 
         <%= f.input :end_date, placeholder: "dd/mm/yyyy" %>
 
+        <%= f.input :total_price, placeholder: "total_price" %>
 
 
-        <h4>Total price: £312</h4>
-
-        <%= link_to "Make Booking", cars_path, class: "btn btn-danger" %>
-        <%#= f.submit class: "btn btn-danger" %>
+        <%= f.submit class: "btn btn-danger" %>
 
       </div>
     <% end %>

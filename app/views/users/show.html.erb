@@ -33,11 +33,11 @@
           <% booking_count += 1 %>
           <ul>
             <li><strong>Booking <%= booking_count %>.</strong></li>
-            <li>Car: <%= booking.car.make booking.car.model %></li>
+            <li>Car: <%= booking.car.make %><%= booking.car.model %></li>
             <li>Total Price: <%= booking.total_price %></li>
             <li>Start date: <%= booking.start_date %></li>
             <li>End date: <%= booking.end_date %></li>
-            <li>Counterparty: <%= booking.user_id %></li>
+            <li>Owner: <%= booking.user.first_name %> <%= booking.user.last_name %></li>
           </ul>
           <% end %>
           <%= link_to "Edit Bookings", '#', class: "btn btn-danger" %>

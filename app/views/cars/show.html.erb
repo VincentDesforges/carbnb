@@ -43,7 +43,7 @@
           </div>
 
           <div>
-            <%= link_to "Contact #{@car.user.first_name}", new_booking_path, class: "btn btn-danger asign-btn-width" %>
+            <%= link_to "Contact #{@car.user.first_name}", new_car_booking_path(@car), class: "btn btn-danger asign-btn-width" %>
           </div>
         </div>
 
