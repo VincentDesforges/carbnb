@@ -2,6 +2,7 @@ class Car < ApplicationRecord
   belongs_to :user
   has_many :bookings
 
+
   validates :make, presence: true
   validates :model, presence: true
   validates :mileage, presence: true
@@ -10,7 +11,7 @@ class Car < ApplicationRecord
   validates :price_per_day, presence: true
   validates :location, presence: true
 
-  has_many :carphotos
+  has_many :carphotos, dependent: :destroy
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
