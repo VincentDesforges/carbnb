@@ -22,11 +22,6 @@ john = User.new({
   remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519745313/nzoa0wkkahq6paue89jc.png'
 })
 
-# Galaxy.create!(
-# name: 'Andromeda',
-# remote_photo_url: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg',
-# address: 'next to the Milky Way')
-
 seb = User.new({
   first_name: "Johann",
   last_name: "Saunier",
@@ -142,7 +137,7 @@ audi = Car.new({
   mileage: 100000,
   price_per_day: 35,
   location: "Mayfair, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/images.jpg'
+  #remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/images.jpg'
 
 })
 audi.user = User.find_by(username: "bobby")
@@ -155,7 +150,7 @@ ferrari = Car.new({
   mileage: 1000,
   price_per_day: 22,
   location: "Chelsea, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/ferrari.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/ferrari.jpg'
 
 })
 ferrari.user = User.find_by(username: "real2018")
@@ -168,7 +163,7 @@ aston = Car.new({
   mileage: 8000,
   price_per_day: 73,
   location: "Kings Cross, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/db11.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/db11.jpg'
 
 })
 aston.user = User.find_by(username: "billy")
@@ -181,7 +176,7 @@ porsche = Car.new({
   mileage: 5000,
   price_per_day: 69,
   location: "Marylebone, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902253/911.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902253/911.jpg'
 
 })
 porsche.user = User.find_by(username: "DJ")
@@ -194,7 +189,7 @@ atom = Car.new({
   mileage: 4000,
   price_per_day: 59,
   location: "Covent Garden, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/atom.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/atom.jpg'
 
 })
 atom.user = User.find_by(username: "E-dog")
@@ -207,7 +202,7 @@ thrust = Car.new({
   mileage: 100,
   price_per_day: 39,
   location: "Waterloo, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/thrust.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/thrust.jpg'
 
 })
 thrust.user = User.find_by(username: "E-dog")
@@ -220,7 +215,7 @@ lambo = Car.new({
   mileage: 40000,
   price_per_day: 89,
   location: "Westminster, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/lambo.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/lambo.jpg'
 
 })
 lambo.user = User.find_by(username: "billy")
@@ -233,7 +228,7 @@ tractor = Car.new({
   mileage: 6000,
   price_per_day: 79,
   location: "Kensington, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903247/tractor.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903247/tractor.jpg'
 
 })
 tractor.user = User.find_by(username: "real2018")
@@ -246,7 +241,7 @@ hummer = Car.new({
   mileage: 1000,
   price_per_day: 46,
   location: "Earls Court, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903244/hummer.png'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903244/hummer.png'
 
 })
 hummer.user = User.find_by(username: "DJ")
@@ -259,7 +254,7 @@ mustang = Car.new({
   mileage: 9600,
   price_per_day: 89,
   location: "Waterloo, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/mustang.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/mustang.jpg'
 
 })
 mustang.user = User.find_by(username: "sebby3000")
@@ -272,7 +267,7 @@ bmw = Car.new({
   mileage: 9600,
   price_per_day: 89,
   location: "Whitechapel, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906461/m3.png'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906461/m3.png'
 
 })
 bmw.user = User.find_by(username: "billy")
@@ -285,7 +280,7 @@ volvo = Car.new({
   mileage: 9600,
   price_per_day: 89,
   location: "Mayfair, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906466/volvo.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906466/volvo.jpg'
 
 })
 volvo.user = User.find_by(username: "DJ")
@@ -298,7 +293,7 @@ mecan = Car.new({
   mileage: 9600,
   price_per_day: 89,
   location: "Marylebone, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906462/mecan.webp'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906462/mecan.webp'
 
 })
 mecan.user = User.find_by(username: "johnjohn123")
@@ -311,7 +306,7 @@ cayenne = Car.new({
   mileage: 9600,
   price_per_day: 54,
   location: "Chelsea, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907020/cayenne.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907020/cayenne.jpg'
 
 })
 cayenne.user = User.find_by(username: "sebby3000")
@@ -324,7 +319,7 @@ db5 = Car.new({
   mileage: 9600,
   price_per_day: 89,
   location: "Waterloo, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906989/db5.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906989/db5.jpg'
 
 })
 db5.user = User.find_by(username: "DJ")
@@ -337,7 +332,7 @@ mclaren = Car.new({
   mileage: 3600,
   price_per_day: 39,
   location: "Charing Cross, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907124/mclaren.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907124/mclaren.jpg'
 
 })
 mclaren.user = User.find_by(username: "billy")
@@ -350,7 +345,7 @@ spider = Car.new({
   mileage: 15000,
   price_per_day: 75,
   location: "Hyde Park, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907042/spider.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907042/spider.jpg'
 
 })
 spider.user = User.find_by(username: "bobby")
@@ -363,7 +358,7 @@ greyferrari = Car.new({
   mileage: 10000,
   price_per_day: 65,
   location: "Baker Street, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907535/458.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907535/458.jpg'
 
 })
 greyferrari.user = User.find_by(username: "sebby3000")
@@ -376,7 +371,7 @@ countryman = Car.new({
   mileage: 10000,
   price_per_day: 65,
   location: "Baker Street, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907526/countryman.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907526/countryman.jpg'
 
 })
 countryman.user = User.find_by(username: "billy")
@@ -389,7 +384,7 @@ fiat = Car.new({
   mileage: 10000,
   price_per_day: 65,
   location: "Baker Street, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910740/fiat.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910740/fiat.jpg'
 
 })
 fiat.user = User.find_by(username: "DJ")
@@ -402,7 +397,7 @@ smart = Car.new({
   mileage: 10000,
   price_per_day: 65,
   location: "Waterloo, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910777/smart2.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910777/smart2.jpg'
 
 })
 smart.user = User.find_by(username: "johnjohn123")
@@ -415,7 +410,7 @@ beetle = Car.new({
   mileage: 10000,
   price_per_day: 25,
   location: "Baker Street, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910731/beetle.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910731/beetle.jpg'
 
 })
 beetle.user = User.find_by(username: "real2018")
@@ -428,7 +423,7 @@ monster = Car.new({
   mileage: 12000,
   price_per_day: 15,
   location: "Green Park, London",
-  remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910747/monster.jpg'
+  # remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910747/monster.jpg'
 
 })
 monster.user = User.find_by(username: "real2018")
@@ -474,8 +469,102 @@ photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/imag
 photo.car = Car.find_by(make: "Mini", model:"Cooper OG")
 photo.save!
 
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/images.jpg')
+photo.car = Car.find_by(make: "Audi", model: "R8")
+photo.save!
+
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/ferrari.jpg')
+photo.car = Car.find_by(make: "Ferrari", model: "La Ferrari")
+photo.save!
+
+photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/db11.jpg')
+photo.car = Car.find_by(make: "Aston martin", model: "DB11")
+photo.save!
+
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902253/911.jpg')
+  photo.car = Car.find_by(make: "Porsche", model: "911")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902260/atom.jpg')
+  photo.car = Car.find_by(make: "Ariel", model: "Atom")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519902261/thrust.jpg')
+  photo.car = Car.find_by(make: "Thrust", model: "SSC")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/lambo.jpg')
+  photo.car = Car.find_by(make: "Lamborghini", model: "Huracan")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903247/tractor.jpg')
+  photo.car = Car.find_by(make: "Valtra", model: "Versu")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903244/hummer.png')
+  photo.car = Car.find_by(make: "Hummer", model: "H2")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519903241/mustang.jpg')
+  photo.car = Car.find_by(make: "Ford", model: "Mustang")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906461/m3.png')
+  photo.car = Car.find_by(make: "BMW", model: "M3")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906466/volvo.jpg')
+  photo.car = Car.find_by(make: "Volvo", model: "SC90")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906462/mecan.webp')
+  photo.car = Car.find_by(make: "Porsche", model: "Mecan")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907020/cayenne.jpg')
+  photo.car = Car.find_by(make: "Porsche", model: "Cayenne")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519906989/db5.jpg')
+  photo.car = Car.find_by(make: "Aston Martin", model: "DB5")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907124/mclaren.jpg')
+  photo.car = Car.find_by(make: "Mclaren", model: "Senna")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907042/spider.jpg')
+  photo.car = Car.find_by(make: "Mclaren", model: "Spider")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907535/458.jpg')
+  photo.car = Car.find_by(make: "Ferrari", model: "458")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519907526/countryman.jpg')
+  photo.car = Car.find_by(make: "Mini", model: "Countryman")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910740/fiat.jpg')
+  photo.car = Car.find_by(make: "Fiat", model: "500")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910777/smart2.jpg')
+  photo.car = Car.find_by(make: "Smart", model: "2")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910731/beetle.jpg')
+  photo.car = Car.find_by(make: "VW", model: "Beetle")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910747/monster.jpg')
+  photo.car = Car.find_by(make: "Monster", model: "Truck")
+  photo.save!
+
 puts "Photo seed done..."
 puts "Seed finished..."
+
 
 
 
