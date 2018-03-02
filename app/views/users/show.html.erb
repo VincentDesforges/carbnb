@@ -36,7 +36,7 @@
                     <%= link_to "#{booking.start_date} - #{booking.car.make} #{booking.car.model} - #{booking.car.user.username} | ", booking_path(booking) %>
                   </div>
                  <div class="trash">
-                   <%= link_to car_booking_path(:car_id), method: :delete, data: {confirm: "Are you sure?"} do %>
+                   <%= link_to car_booking_path(booking.car, booking), method: :delete, data: {confirm: "Are you sure?"} do %>
                     <i class="fas fa-trash-alt"></i>
                   <% end %>
                  </div>
