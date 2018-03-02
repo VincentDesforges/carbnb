@@ -21,7 +21,7 @@
         <p class="price-style">
           <strong>£<%= @car.price_per_day %></strong> per day
         </p>
-        <%=  %>
+        <%= render "shared/avg_star_rating", car: @car %>
         <ul class="car-card-list">
           <li>Make: <%= @car.make %></li>
           <li>Model: <%= @car.model %></li>
