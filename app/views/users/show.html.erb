@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-12">
         <div class="content-box">
-            <%= cl_image_tag @user.photo %>
+            <%= cl_image_tag @user.photo, gravity: "face", height: 400, width: 400, crop: "thumb" %>
         </div>
       </div>
       <div class="col-xs-12 col-md-12">
