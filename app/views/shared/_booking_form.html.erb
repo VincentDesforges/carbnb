@@ -4,12 +4,11 @@
     <%= simple_form_for [@car,@booking] do |f| %>
 
       <div class="booking-form">
+        <p><strong>Price Per Day:</strong> £<%= @car.price_per_day %></p>
+
         <%= f.input :start_date, placeholder: "dd/mm/yyyy" %>
 
         <%= f.input :end_date, placeholder: "dd/mm/yyyy" %>
-
-        <%= f.input :total_price, placeholder: "total_price" %>
-
 
         <%= f.submit class: "btn btn-danger" %>
 

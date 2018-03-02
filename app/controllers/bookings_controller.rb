@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
     @car = Car.find(params[:car_id])
     @booking.car = @car
     pundit_booking
+    @booking.total_price = @car.price_per_day * (@booking.end_date - @booking.start_date)
     if @booking.save
       redirect_to booking_path(@booking)
     else
