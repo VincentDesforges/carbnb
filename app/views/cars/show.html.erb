@@ -32,7 +32,7 @@
         <div class="contact-row">
           <div>
             <%= link_to user_path(@car.user), class: :avatarNtext do %>
-              <%= image_tag(@car.user.photo, {class: :avatar}) %>
+              <%= cl_image_tag @car.user.photo, gravity: "face", height: 400, width: 400, crop: "thumb", class: "avatar" %>
               <div class="contact-text">
                 <p><strong><%= @car.user.first_name %></strong></p>
                 <p><%= @car.user.address %></p>
