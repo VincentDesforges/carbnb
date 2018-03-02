@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20180301161733) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_cars_on_user_id"
