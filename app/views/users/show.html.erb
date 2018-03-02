@@ -32,6 +32,7 @@
             <% @user.bookings.each do |booking| %>
             <ul>
               <li><%= link_to "#{booking.start_date} - #{booking.car.make} #{booking.car.model} - #{booking.car.user.username}", booking_path(booking) %></li>
+              <%= link_to "Delete booking", car_booking_path(:car_id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
             </ul>
             <% end %>
           </div>
