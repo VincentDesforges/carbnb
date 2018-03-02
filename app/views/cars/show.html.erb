@@ -107,6 +107,7 @@
       <div class="review">
         <h4>Reviews</h4>
         <ul>
+          <li><%= if @car.reviews.blank? then "Be the first to write a review!" end %></li>
           <% @car.reviews.each do |review| %>
           <li><%= review.rating %>/5 - <%= review.content %></li>
           <% end %>
@@ -114,8 +115,10 @@
       </div>
     </div>
     <div class="col-xs-12 col-md-6">
-      <h4>Write a Review</h4>
-      <%= render "shared/review_form" %>
+      <div class="review">
+        <h4>Write a Review</h4>
+        <%= render "shared/review_form" %>
+      </div>
     </div>
   </div>
 </div>
