@@ -3,10 +3,10 @@ class CarphotoPolicy < ApplicationPolicy
     def resolve
       scope
     end
+  end
 
-    def destroy?
-      user.admin || record.car.user == user
-      # record.car.user == user
-    end
+  def destroy?
+    user.admin || record.car.user == user
+    # record.car.user == user
   end
 end

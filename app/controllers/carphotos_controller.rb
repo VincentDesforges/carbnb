@@ -5,9 +5,11 @@ class CarphotosController < ApplicationController
   end
 
   def destroy
-    @carphotos = Carphoto.find(params[:id])
-    authorize @carphotos
-    # render index
+    # raise
+    @carphoto = Carphoto.find(params[:id])
+    @carphoto.destroy
+    authorize @carphoto
+    redirect_to car_carphotos_path(params[:car_id])
   end
 
   private
