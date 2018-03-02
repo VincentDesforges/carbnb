@@ -18,7 +18,9 @@
 
 
         <div class="car-photo">
-          <%= cl_image_tag @booking.car.photo, width:485, height:300, crop: :fill, class: "car-photo" %>
+          <% if @booking.car.carphotos.first.photo %>
+            <%= cl_image_tag @booking.car.carphotos.first.photo, width:485, height:300, crop: :fill, class: "car-photo" %>
+          <% end %>
         </div>
 
       </div>

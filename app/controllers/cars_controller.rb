@@ -44,10 +44,12 @@ class CarsController < ApplicationController
     @car.user = current_user
     punit_car
     if @car.save
-      params["photos"]['photo'].each do |a|
-        c = Carphoto.new(photo: a)
-        c.car = @car
-        c.save
+      if params["photos"]
+        params["photos"]['photo'].each do |a|
+          c = Carphoto.new(photo: a)
+          c.car = @car
+          c.save
+        end
       end
       redirect_to car_path(@car)
     else
