@@ -55,46 +55,53 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6 col-md-offset-3">
-      <div class="holder">
-        <div id="carousel-car" class="carousel slide" data-ride="carousel" data-interval="5000">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-car" data-slide-to="0" class="active"></li>
-            <% (@car.carphotos.length - 1).times do |i| %>
-              <li data-target="#carousel-car" data-slide-to="<%= i + 1 %>"></li>
-            <% end %>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <%= cl_image_tag @car.carphotos.first.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
-            </div>
-            <% @car.carphotos.drop(1).each do |photo_class| %>
-              <div class="item">
-                <%= cl_image_tag photo_class.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+
+  <!-- Carousel row starts here -->
+  <% if @car.carphotos.first %>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <div class="holder">
+          <div id="carousel-car" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-car" data-slide-to="0" class="active"></li>
+              <% (@car.carphotos.length - 1).times do |i| %>
+                <li data-target="#carousel-car" data-slide-to="<%= i + 1 %>"></li>
+              <% end %>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <%= cl_image_tag @car.carphotos.first.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
               </div>
-            <% end %>
-          </div>
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-car" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-car" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div> <!-- Carousel -->
-      </div>
-      
-      <% if policy(@car).update? %>
-        <div class="center-btn-gallery">
-          <%= link_to "Edit Photo Gallery", car_carphotos_path(@car), class: "btn btn-danger" %>
+              <% @car.carphotos.drop(1).each do |photo_class| %>
+                <div class="item">
+                  <%= cl_image_tag photo_class.photo, width:485, height: 300, crop:"fill", gravity:"auto", class: "fit-to-size" %>
+                </div>
+              <% end %>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-car" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-car" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div> <!-- Carousel -->
         </div>
-      <% end %>
-      
+
+        <% if policy(@car).update? %>
+          <div class="center-btn-gallery">
+            <%= link_to "Edit Photo Gallery", car_carphotos_path(@car), class: "btn btn-danger" %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
+  <!-- Carousel row ends here -->
+
+
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="review">
