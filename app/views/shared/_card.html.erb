@@ -7,13 +7,12 @@
         </div>
 
         <div class="card-footer">
-          <i class="fas fa-star"></i><i class="far fa-star"></i>
 
           <div class="car-details">
-            <h4><%= car.reviews.count %> <%= car.reviews.first.rating unless car.reviews.empty? %></h4>
-            <h4 class="rating">*****</h4>
             <h4 class="car-name"><%= car.make %> <%= car.model %></h4>
           </div>
+
+          <%= render "shared/avg_star_rating", car: car %>
 
           <div class="owner-section">
             <%= cl_image_tag car.user.photo, gravity: "face", height: 400, width: 400, crop: "thumb", class: "avatar avatar-small" %>
