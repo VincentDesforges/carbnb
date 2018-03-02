@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :cars do
     resources :bookings, only: [:new, :create, :index, :destroy]
-    resources :carphotos, only: [:create, :destroy]
+
+    resources :carphotos, only: [:index, :destroy]
     resources :reviews, only: [  :create ]
   end
 

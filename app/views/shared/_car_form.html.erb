@@ -34,8 +34,11 @@
       </div>
 
       <%= f.input :location, placeholder: "Location: e.g. 138 Kingsland Road, London E2 8DY", label: false %>
-      <%= f.fields_for :carphotos do |p| %>
-        <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
+
+      <% if params['action'] == "new" %>
+        <%= f.fields_for :carphotos do |p| %>
+          <%= f.file_field :photo, multiple: true, name: "photos[photo][]" %>
+        <% end %>
       <% end %>
 
 

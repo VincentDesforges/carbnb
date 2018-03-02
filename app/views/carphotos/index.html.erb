@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Edit Photo Gallery</h1>
+
+  <%= link_to "Add a car photo", "#", class: "btn btn-danger" %>
+
+  <div class="viewport-min-heigth">
+    <div class="row">
+
+      <% @carphotos.each do |photo| %>
+        <div class="col-xs-6 col-sm-3">
+          <div class="gallery-img" style="background-image: url(<%= cl_image_path photo.photo %>);">
+            <%= link_to car_carphoto_path(params[:car_id], photo), method: :delete do %>
+              <i class="fas fa-trash-alt color-bin"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
