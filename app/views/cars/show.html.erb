@@ -21,6 +21,7 @@
         <p class="price-style">
           <strong>£<%= @car.price_per_day %></strong> per day
         </p>
+        <%=  %>
         <ul class="car-card-list">
           <li>Make: <%= @car.make %></li>
           <li>Model: <%= @car.model %></li>
@@ -102,20 +103,32 @@
   <!-- Carousel row ends here -->
 
 
+
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="review">
         <h4>Reviews</h4>
         <ul>
+          <li>
+            <%= if @car.reviews.blank? then "Be the first to write a review!" end %>
+          </li>
           <% @car.reviews.each do |review| %>
-          <li><%= review.rating %>/5 - <%= review.content %></li>
+          <li>
+            <% review.rating.to_i.times do %><i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - review.rating.to_i).times do %><i class="far fa-star"></i>
+            <% end %>
+          <%= review.content %>
+          </li>
           <% end %>
         </ul>
       </div>
     </div>
     <div class="col-xs-12 col-md-6">
-      <h4>Write a Review</h4>
-      <%= render "shared/review_form" %>
+      <div class="review">
+        <h4>Write a Review</h4>
+        <%= render "shared/review_form" %>
+      </div>
     </div>
   </div>
 </div>
