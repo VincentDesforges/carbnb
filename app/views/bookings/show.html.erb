@@ -10,10 +10,11 @@
             <p class="total_price"><strong>Total price:</strong> £<%= @booking.total_price %></p>
             <p class="start_date"><strong>Start date: </strong> <%= @booking.start_date %></p>
             <p class="end_date"><strong>End date: </strong> <%= @booking.end_date %></p>
-            <p class="owner"><strong>Owner:</strong> <%= link_to " #{@booking.user.first_name} #{@booking.user.last_name}", user_path(@booking.car.user) %> </p>
+            <p class="owner"><strong>Owner:</strong> <%= link_to " #{@booking.car.user.first_name} #{@booking.car.user.last_name}", user_path(@booking.car.user) %> </p>
+            <p class="borrower"><strong>Borrower:</strong> <%= link_to " #{@booking.user.first_name} #{@booking.user.last_name}", user_path(@booking.user) %> </p>
           </div>
 
-          <%= cl_image_tag @booking.car.user.photo, class: "owner-photo" %>
+          <%= cl_image_tag @booking.car.user.photo, gravity: "face", height: 400, width: 400, crop: "thumb", class: "owner-photo" %>
         </div>
 
 
