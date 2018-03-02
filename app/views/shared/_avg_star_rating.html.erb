@@ -1,0 +1,13 @@
+<% unless car.reviews.empty? %>
+  <% full_stars = (car.reviews.sum(:rating).to_f/car.reviews.count).round %>
+  <% empty_stars = 5 - full_stars%>
+  <div class="rating">
+    <% full_stars.times do %>
+      <i class="fas fa-star"></i>
+    <% end %>
+    <% empty_stars.times do %>
+      <i class="far fa-star"></i>
+    <% end %>
+  </div>
+<% end %>
+
