@@ -14,5 +14,4 @@ class User < ApplicationRecord
   validates :address, presence: true
 
   mount_uploader :photo, PhotoUploader
-
 end
