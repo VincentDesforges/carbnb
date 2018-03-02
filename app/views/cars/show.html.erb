@@ -30,7 +30,7 @@
         </ul>
         <div class="contact-row">
           <div>
-            <%= link_to '#', class: :avatarNtext do %>
+            <%= link_to user_path(@car.user), class: :avatarNtext do %>
               <%= image_tag(@car.user.photo, {class: :avatar}) %>
               <div class="contact-text">
                 <p><strong><%= @car.user.first_name %></strong></p>
