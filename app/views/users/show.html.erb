@@ -28,11 +28,23 @@
         <div class="my-cars-content-box">
           <h1>My Bookings</h1>
           <div class="cars-list">
-            <% @user.bookings.each do |booking| %>
             <ul>
-              <li><%= link_to "#{booking.start_date} - #{booking.car.make} #{booking.car.model} - #{booking.car.user.username}", booking_path(booking) %></li>
-            </ul>
+            <% @user.bookings.each do |booking| %>
+              <li>
+                <div class="row row-display-flex">
+                  <div class="spacer-box">
+                    <%= link_to "#{booking.start_date} - #{booking.car.make} #{booking.car.model} - #{booking.car.user.username} | ", booking_path(booking) %>
+                  </div>
+                 <div class="trash">
+                   <%= link_to car_booking_path(:car_id), method: :delete, data: {confirm: "Are you sure?"} do %>
+                    <i class="fas fa-trash-alt"></i>
+                  <% end %>
+                 </div>
+
+                </div>
+              </li>
             <% end %>
+            </ul>
           </div>
         </div>
       </div>
