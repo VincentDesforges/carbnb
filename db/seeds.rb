@@ -461,9 +461,6 @@ photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/imag
 photo.car = Car.find_by(make: "Bugatti", model:"Chiron")
 photo.save!
 
-photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519493904/k7n9gni8qhnapwo1yztz.jpg')
-photo.car = Car.find_by(make: "Bugatti", model:"Chiron")
-photo.save!
 
 photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519834660/mini-5dr-hatch-cooper-d-dct.jpg')
 photo.car = Car.find_by(make: "Mini", model:"Cooper OG")
@@ -561,6 +558,22 @@ photo.save!
   photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519910747/monster.jpg')
   photo.car = Car.find_by(make: "Monster", model: "Truck")
   photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519987476/bugatti-chiron13-1002706506415589954.jpg')
+  photo.car = Car.find_by(make: "Bugatti", model: "Chiron")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519987473/ba42b0885358a4ea64eb52b838fd6118--diamonds-car-interiors.jpg')
+  photo.car = Car.find_by(make: "Bugatti", model: "Chiron")
+  photo.save!
+
+  photo = Carphoto.new(remote_photo_url: 'http://res.cloudinary.com/dhulqpis6/image/upload/v1519987470/2017-bugatti-chiron-rear-end.jpg')
+  photo.car = Car.find_by(make: "Bugatti", model: "Chiron")
+  photo.save!
+
+
+
+
 
 puts "Photo seed done..."
 puts "Seed finished..."
