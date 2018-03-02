@@ -46,7 +46,7 @@
 .owner-details {
   color: $red;
   margin: 5px;
-  // position: absolute;
+  flex: 1 1 auto;
   left: 110px;
   bottom: 30px;
 }
@@ -73,6 +73,7 @@
 
 .owner-section{
   display: flex;
+  align-items: center;
 }
 
 .avatar{
